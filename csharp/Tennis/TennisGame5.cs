@@ -2,8 +2,12 @@ using System;
 
 namespace Tennis
 {
+    // TODO: Consider using another class for the player, such as 'Player.cs', and an abstraction like 'IPlayer'
+    // This would enhance code clarity and maintainability, enabling easier extension and modification
     public class TennisGame5 : ITennisGame
     {
+        // TODO: By convention, it's preferable to use camelCase for variable names, such as 'playerOneScore'
+        // Encapsulation would be beneficial to restrict access and modification to these variables
         private int player1Score;
         private int player2Score;
         private string player1Name;
@@ -22,22 +26,28 @@ namespace Tennis
             else if (playerName == player2Name)
                 player2Score++;
             else
+                // TODO: Consider using a custom exception type for better error handling and debugging
                 throw new ArgumentException("Invalid player name.");
         }
 
         public string GetScore()
         {
+            // TODO: The usage of local variables 'p1' and 'p2' is redundant and unnecessary, directly use 'player1Score' and 'player2Score'
             int p1 = player1Score;
             int p2 = player2Score;
 
+            // TODO: Refactor the loop logic for readability and clarity. Consider using descriptive variable names
             while (p1 > 4 || p2 > 4)
             {
                 p1--;
                 p2--;
             }
 
+            // TODO: The switch statement has become too lengthy and less readable
+            // Extract this logic into a separate method for better maintainability
             return (p1, p2) switch
             {
+                // TODO: Consider using constants or enums instead of hardcoding strings for better maintainability and readability.
                 (0, 0) => "Love-All",
                 (0, 1) => "Love-Fifteen",
                 (0, 2) => "Love-Thirty",
@@ -63,6 +73,7 @@ namespace Tennis
                 (4, 2) => $"Win for {player1Name}",
                 (4, 3) => $"Advantage {player1Name}",
                 (4, 4) => "Deuce",
+                // TODO: Throw a custom exception for better error handling and debugging.
                 _ => throw new ArgumentException("Invalid score.")
             };
         }
