@@ -36,7 +36,9 @@ namespace Tennis
             int p1 = player1Score;
             int p2 = player2Score;
 
-            // TODO: Refactor the loop logic for readability and clarity. Consider using descriptive variable names
+            // TODO: Refactor the loop logic for readability and clarity
+            // Consider using descriptive variable names
+            // You can use for example a variable 'hasPlayerAdvantage' equal to the condition 'p1 > 4 || p2 > 4' this will more readable
             while (p1 > 4 || p2 > 4)
             {
                 p1--;
