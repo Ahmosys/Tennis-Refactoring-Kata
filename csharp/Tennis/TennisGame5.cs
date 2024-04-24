@@ -49,7 +49,7 @@ namespace Tennis
             // Extract this logic into a separate method for better maintainability
             return (p1, p2) switch
             {
-                // TODO: Consider using constants or enums instead of hardcoding strings for better maintainability and readability.
+                // TODO: Consider using constants or enums instead of hardcoding strings for better maintainability and readability
                 (0, 0) => "Love-All",
                 (0, 1) => "Love-Fifteen",
                 (0, 2) => "Love-Thirty",
@@ -75,7 +75,7 @@ namespace Tennis
                 (4, 2) => $"Win for {player1Name}",
                 (4, 3) => $"Advantage {player1Name}",
                 (4, 4) => "Deuce",
-                // TODO: Throw a custom exception for better error handling and debugging.
+                // TODO: Throw a custom exception for better error handling and debugging
                 _ => throw new ArgumentException("Invalid score.")
             };
         }
