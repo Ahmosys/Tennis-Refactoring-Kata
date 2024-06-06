@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Tennis.Classes;
+using Tennis.Interfaces;
 using Xunit;
 
 namespace Tennis.Tests
@@ -95,6 +97,17 @@ namespace Tennis.Tests
             var game = new TennisGame6("player1", "player2");
             CheckAllScores(game, p1, p2, expected);
         }
+
+
+        [Theory]
+        [ClassData(typeof(TestDataGenerator))]
+        public void Tennis7Test(int p1, int p2, string expected)
+        {
+            var console = new StringBuilderConsole();
+            var game = new TennisGame5Correction("player1", "player2", console);
+            CheckAllScores(game, p1, p2, expected);
+        }
+
         private void CheckAllScores(ITennisGame game, int player1Score, int player2Score, string expectedScore)
         {
             var highestScore = Math.Max(player1Score, player2Score);
