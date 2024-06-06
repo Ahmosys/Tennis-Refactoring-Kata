@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <Folder Include="GoldenMasterResult\" />
+    <Folder Include="GoldenMasterResult2\" />
   </ItemGroup>
 
 </Project>
