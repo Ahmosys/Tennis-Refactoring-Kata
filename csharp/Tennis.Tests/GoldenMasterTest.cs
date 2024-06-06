@@ -103,7 +103,7 @@ namespace Tennis.Tests
         public void Replay(int p1, int p2)
         {
             var output = RunAGame(p1, p2);
-            var directoryPath = "GoldenMasterResult";
+            var directoryPath = "D:\\PROJECTS\\SCHOOL_PROJECTS\\Tennis-Refactoring-Kata\\csharp\\Tennis.Tests\\GoldenMasterResult\\";
             var fileName = $"GoldenMasterTest.Record.{p1}.{p2}.txt";
             var filePath = Path.Combine(directoryPath, fileName);
 

@@ -39,6 +39,7 @@ namespace Tennis
         {
             if (IsDeuce())
             {
+                _console.WriteLine("Deuce");
                 return "Deuce";
             }
             else if (IsAdvancedScore())
