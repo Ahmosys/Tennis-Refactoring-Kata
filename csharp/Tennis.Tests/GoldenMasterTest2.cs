@@ -8,7 +8,7 @@ namespace Tennis.Tests
 {
     public class GoldenMasterTest2
     {
-        private const string Dir = "D:\\PROJECTS\\SCHOOL_PROJECTS\\Tennis-Refactoring-Kata\\csharp\\Tennis.Tests\\GoldenMasterResult2\\";
+        private const string Dir = "C:\\Users\\ahmos\\Desktop\\Tennis-Refactoring-Kata\\csharp\\Tennis.Tests\\GoldenMasterResult2\\";
 
         private string PlayGame(string player1Name, string player2Name, int player1Score, int player2Score)
         {

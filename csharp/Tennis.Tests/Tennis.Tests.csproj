@@ -1,10 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="GoldenMasterResult\**" />
+    <EmbeddedResource Remove="GoldenMasterResult\**" />
+    <None Remove="GoldenMasterResult\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Tennis\Tennis.csproj" />
@@ -22,7 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="GoldenMasterResult\" />
     <Folder Include="GoldenMasterResult2\" />
   </ItemGroup>
 
