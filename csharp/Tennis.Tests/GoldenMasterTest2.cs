@@ -38,6 +38,7 @@ namespace Tennis.Tests
 
         public static IEnumerable<object[]> CasGoldenMaster()
         {
+            // Regular scores
             for (int scorePlayer1 = 0; scorePlayer1 < 16; scorePlayer1++)
                 for (int scorePlayer2 = 0; scorePlayer2 < 16; scorePlayer2++)
                 {
@@ -45,6 +46,14 @@ namespace Tennis.Tests
                     yield return new object[] { "John", "Jane", scorePlayer1, scorePlayer2 };
                     yield return new object[] { "Alice", "Bob", scorePlayer1, scorePlayer2 };
                 }
+
+            // Edge cases
+            yield return new object[] { "player1", "player2", -1, 5 };   // Negative score for player1
+            yield return new object[] { "player1", "player2", 5, -1 };   // Negative score for player2
+            yield return new object[] { "player1", "player2", -1, -1 };  // Both scores negative
+            yield return new object[] { "player1", "player2", 100, 100 }; // Extremely high scores for both players
+            yield return new object[] { "player1", "player2", 100, 0 };   // Extremely high score for player1
+            yield return new object[] { "player1", "player2", 0, 100 };   // Extremely high score for player2
         }
 
         [Theory]
